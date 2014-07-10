@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>Beers and breweries</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+    <body class="twoColLiqRtHdr">
+    <div id="container">
+
+        <div id="mainHeader" style="background:url('/images/header6.jpg');height:35px;">
+            <div id="welcomeMsg" style="color: white; font-size:20px; background:url('/images/header.jpg');padding: 0 10px;font-size: 18px;"> </div>
+
+			<a id="registerBtn" href="#" style="float:right;" class="classname">Register</a>
+            <a id="loginBtn" href="#" class="classname login-visible">Login</a>
+			<a id="logoutBtn" href="#" class="classname login-not-visible">Logout</a>
+
+        </div>
+
+        <div id="header">
+            <h1>Beers and breweries</h1>
+        <div>
+      <ul id="Menu">
+       <li><a href="home.html" title="Home" onmouseover="getDescription(menu_1)">Home</a></li>
+       <li><a href="beers.html" title="Beers" onmouseover="getDescription(menu_2)">Beers</a></li>
+	   <li><a href="breweries.html" title="Breweries" onmouseover="getDescription(menu_3)">Breweries</a></li>
+       <li><a href="stores.html" title="Stores" onmouseover="getDescription(menu_4)">Stores</a></li>
+	   </ul>
+</div>
+
+<br class="clearfloat">
+<div id="description">  <script>getDescription(menu_1);</script></div>
+</div>
+
+
+<div id="tent">
+
+					<div style="width:90%;margin-top:20px;float:left;">
+                        <h3 id="name1"></h3>
+						<img id="img1" src="beer.jpg" />
+                        <br/>
+                          <br/>
+                        <div style="float:left; margin-left:10px; width:75%">
+								<div id="description1"></div>
+						</div>
+                    </div>
+
+                    <div style="width:90%;margin-top:40px;float:left;">
+                        <h3 id="name2"></h3>
+							<img id="img2" src="beer.jpg"/>
+                        <br/>
+                          <br/>
+                             <div style="float:left; margin-left:10px; width:75%">
+								<div id="description2"></div>
+							</div>
+                    </div>
+
+
+                     <div style="width:90%;margin-top:40px;float:left;">
+                         <h3 id="name3"></h3>
+                         <img id="img3" src="beer.jpg" />
+                         <br/>
+                           <br/>
+						    <div style="float:left; margin-left:10px; width:75%">
+
+								<div id="description3"></div>
+							</div>
+                    </div>
+
+<div id="login" style="display:none;position: absolute;right: 150;top: 35px;" >
+
+			<form method="post" action="/" class="form-container">
+				<div class="form-title"><h2>Sign in</h2></div>
+				<div class="form-title">Username</div>
+				<input class="form-field" type="text" name="username" /><br />
+				<div class="form-title">Password</div>
+				<input class="form-field" type="password" name="password" /><br />
+				<div class="submit-container">
+				<input class="submit-button" type="submit" value="Submit" />
+				</div>
+			</form>
+
+		</div>
+
+		<div id="register" style="display:none;position: absolute;right: 150;top: 35px;" >
+
+			<form method="post" action="/register" class="form-container">
+				<div class="form-title"><h2>Register</h2></div>
+				<div class="form-title">First name</div>
+				<input class="form-field" type="text" name="firstname" /><br />
+				<div class="form-title">Last name</div>
+				<input class="form-field" type="text" name="lastname" /><br />
+				<div class="form-title">Username</div>
+				<input class="form-field" type="text" name="username" /><br />
+				<div class="form-title">Email</div>
+				<input class="form-field" type="email" name="email" /><br />
+				<div class="form-title">Password</div>
+				<input class="form-field" type="password" name="password" /><br />
+				<div class="submit-container">
+				<input class="submit-button" type="submit" value="Submit" />
+				</div>
+			</form>
+
+		</div>
+
+		<form id="logout" method="post" action="/logout" style="visibility:hidden">
+			<input type="submit">
+		</form>
+
+</div>
+
+<div id="footer"><span id="footer"></span> </div>
+</div>
+
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" > </script>
+		<script type="text/javascript">
+
+				$("#logoutBtn").click(function(){
+					$("#logout").submit();
+				});
+
+				$("#loginBtn").click(function(){
+					var visible = $("#login").css("display");
+
+					if(visible == "none"){
+						$("#login").css("display", "block");
+						$("#register").css("display", "none");
+					}
+					else{
+						$("#login").css("display", "none");
+						$("#register").css("display", "none");
+					}
+				});
+
+				$("#registerBtn").click(function(){
+					var visible = $("#register").css("display");
+
+					if(visible == "none"){
+						$("#register").css("display", "block");
+						$("#login").css("display", "none");
+					}
+					else{
+						$("#register").css("display", "none");
+						$("#login").css("display", "none");
+					}
+				});
+
+		</script>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" > </script>
+        <script type="text/javascript">
+function getDescription(type) {
+if (document.getElementById) {
+document.getElementById("description").style.color = "white";
+var a = document.getElementById("description").style.color;
+document.getElementById("description").innerHTML = type }
+}
+var menu_1 = 'First three beers.'
+var menu_2 = 'Beers from all over the world.';
+var menu_3 = 'Breweries from all over the world.';
+var menu_4 = 'Beer stores from all over the world.';
+
+		</script>
+	</body>
+<html>
