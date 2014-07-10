@@ -8,7 +8,8 @@ First the database is filled with some dummy data about beers(name, description 
 
 When web application is started, initial user with credentials:
  - username: admin
- - password admin
+ - password admin,
+
 is imported into the database. User can register and log in. After logging in, user is redirected to the Home page, and he is able to add new beer into the database. Adding beers is enabled on the beers page.
 User can add name, description and upload a image about the beer that will be displayed on the home page.
 
@@ -35,7 +36,7 @@ To start the application navigate to the root folder of "beer" application and e
 
 [Practical Clojure](http://www.amazon.com/Practical-Clojure-Experts-Voice-Source/dp/1430272317), Luke VanderHart and Stuart Sierra, 
 [Clojure Programming](http://www.amazon.com/Clojure-Programming-Chas-Emerick/dp/1449394701), Chas Emerick, Brian Carper and Chrisophe Grand and
-[Web Development with Clojure, Build Bulletproof Web Apps with Less Code], Dmitri Sotnikov
+Web Development with Clojure, Build Bulletproof Web Apps with Less Code, Dmitri Sotnikov
 
 ## License
 
